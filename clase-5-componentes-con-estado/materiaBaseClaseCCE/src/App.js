@@ -1,7 +1,7 @@
 import React from 'react';
 import Sidebar from './components/Sidebar/Sidebar';
 import Topbar from './components/Topbar/Topbar';
-import Card from './components/Card/Card'
+import Characters from './components/Characters/Characters';
 
 function App() {
   return (
@@ -20,7 +20,8 @@ function App() {
             <h3 className="h3"> Personajes de películas</h3>
             <div className="row card-container">
               {/* Aquí van las tarjetas de cada personaje */}
-              <Card image='/assets/images/characters/ahsoka.jpg' name='Ahsoka' />
+              <Characters />
+              {/* <Card image='/assets/images/characters/ahsoka.jpg' name='Ahsoka' />
               <Card image='/assets/images/characters/anakin.jpg' name='Anakin' />
               <Card image='/assets/images/characters/batman.jpg' name='Batman' />
               <Card image='/assets/images/characters/hulkSmall.jpg' name='Hulk' />
@@ -31,7 +32,7 @@ function App() {
               <Card image='/assets/images/characters/yoda.jpg' name='Yoda' />
               <Card image='/assets/images/characters/capAmerica.jpg' name='Captain America' />
               <Card image='/assets/images/characters/superman.jpg' name='Superman' />
-              <Card image='/assets/images/characters/cell.jpg' name='Cell' />
+              <Card image='/assets/images/characters/cell.jpg' name='Cell' /> */}
               {/* Fin zona de tarjetas de cada personaje */}
             </div>
             {/* Fin nueva sección Personajes */}
