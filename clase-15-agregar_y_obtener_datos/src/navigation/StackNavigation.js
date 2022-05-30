@@ -9,6 +9,8 @@ import Register from "../screens/Register";
 import { StatusBar } from 'expo-status-bar';
 import TabNavigation from './TabNavigation';
 import NewMessage from '../screens/NewMessage'
+import Comments from '../screens/Comments';
+
 
 const Stack = createNativeStackNavigator()
 
@@ -53,11 +55,6 @@ class StackNavigation extends Component{
         })
         .catch(error =>this.setState({errorMessage: error.message}))
     }
-
-
-
-
-
     
     newMessage(message){
         db.collection('messages').add({
@@ -71,15 +68,9 @@ class StackNavigation extends Component{
         .catch(error => console.log(error.message))
     }
 
-
-
-
-
-
     render(){
         return(
-            <NavigationContainer
-            >
+            <NavigationContainer>
                 <Stack.Navigator>
                     {
                         this.state.loggedIn ?
@@ -103,6 +94,10 @@ class StackNavigation extends Component{
                                 initialParams={{
                                     newMessage: (message)=> this.newMessage(message)                                    
                                 }}
+                            />
+                            <Stack.Screen
+                            name='Comments'
+                            component={Comments}
                             />
                         </Stack.Group>
                         :
