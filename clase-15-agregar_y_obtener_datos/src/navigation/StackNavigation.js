@@ -10,7 +10,7 @@ import { StatusBar } from 'expo-status-bar';
 import TabNavigation from './TabNavigation';
 import NewMessage from '../screens/NewMessage'
 import Comments from '../screens/Comments';
-
+import Colors from '../screens/Colors'
 
 const Stack = createNativeStackNavigator()
 
@@ -98,6 +98,10 @@ class StackNavigation extends Component{
                             <Stack.Screen
                             name='Comments'
                             component={Comments}
+                            />
+                            <Stack.Screen
+                            name='Colors'
+                            component={Colors}
                             />
                         </Stack.Group>
                         :

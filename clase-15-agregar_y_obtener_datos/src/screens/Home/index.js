@@ -13,7 +13,7 @@ class Home extends Component {
   }
 
   componentDidMount(){
-    db.collection('messages').onSnapshot(
+    db.collection('messages').where('owner', '==', 'nelson@nelson.com').limit(3).onSnapshot(
       (docs)=>{
         let messages = []
         docs.forEach(
@@ -36,7 +36,7 @@ class Home extends Component {
 
   render(){
     return (
-      <View>
+      <View style={styles.container}>
        <Text>Estos son los Messages recientes:</Text>
 
         {
@@ -55,20 +55,29 @@ class Home extends Component {
         <TouchableOpacity style={styles.btn} onPress={()=> this.props.navigation.navigate('Message')}>
           <Text style={styles.textBtn}>Enviar mensaje a Facu</Text>
         </TouchableOpacity>
+
+        <TouchableOpacity style={styles.btn} onPress={()=> this.props.navigation.navigate('Colors')}>
+          <Text style={styles.textBtn}>Ver colores</Text>
+        </TouchableOpacity>
       </View>
     )
   }
 }
 
 const styles = StyleSheet.create({
-  btn:{
+  container:{
     flex:1,
+    paddingTop:16,
+    paddingBottom:32
+  },
+  btn:{
     borderWidth:1,
     borderRadius:5,
     backgroundColor:'#192A51',
     paddingVertical:16,
     paddingHorizontal:8,
     marginHorizontal:'auto',
+    marginBottom:16,
   },
   textBtn:{
     color:'white'
