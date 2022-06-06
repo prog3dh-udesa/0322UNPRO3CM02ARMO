@@ -1,18 +1,11 @@
 import { View, Text, StyleSheet } from 'react-native'
 import React from 'react'
+import MyCamera from '../../components/MyCamera'
 
 export default function index() {
   return (
     <View style={styles.container}>
-        <View style={styles.subContainer1}>
-            <Text>Color 1</Text>
-        </View>
-        <View style={styles.subContainer2}>
-            <Text>Color 2</Text>
-        </View>
-        <View style={styles.subContainer3}>
-            <Text>Color 2</Text>
-        </View>
+        <MyCamera />
     </View>
   )
 }

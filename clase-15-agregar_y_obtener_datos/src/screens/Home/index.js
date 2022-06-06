@@ -8,11 +8,13 @@ class Home extends Component {
     super(props)
     this.state={
       info:[],
-      loading:true
+      loading:true,
+      prueba:''
     }
   }
 
   componentDidMount(){
+    this.setState({prueba:'hola'}, ()=> console.log(this.state.prueba))
     db.collection('messages').where('owner', '==', 'nelson@nelson.com').limit(3).onSnapshot(
       (docs)=>{
         let messages = []

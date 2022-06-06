@@ -62,7 +62,7 @@ class StackNavigation extends Component{
             createdAt: Date.now(),
             message:message,
             likes:[],
-            subMessages:[]
+            subMessages:[],
         })
         .then(response => console.log(response))
         .catch(error => console.log(error.message))
@@ -92,7 +92,7 @@ class StackNavigation extends Component{
                                 name='Message'
                                 component={NewMessage}
                                 initialParams={{
-                                    newMessage: (message)=> this.newMessage(message)                                    
+                                    newMessage: (message, urlFoto)=> this.newMessage(message, urlFoto)                                    
                                 }}
                             />
                             <Stack.Screen
