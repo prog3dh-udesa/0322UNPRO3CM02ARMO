@@ -56,13 +56,14 @@ class StackNavigation extends Component{
         .catch(error =>this.setState({errorMessage: error.message}))
     }
     
-    newMessage(message){
+    newMessage(message, urlFoto){
         db.collection('messages').add({
             owner:auth.currentUser.email,
             createdAt: Date.now(),
             message:message,
             likes:[],
             subMessages:[],
+            foto:urlFoto
         })
         .then(response => console.log(response))
         .catch(error => console.log(error.message))

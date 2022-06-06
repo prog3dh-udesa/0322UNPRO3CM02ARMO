@@ -1,11 +1,12 @@
 import { View, Text, StyleSheet } from 'react-native'
 import React from 'react'
-import MyCamera from '../../components/MyCamera'
+// import MyCamera from '../../components/MyCamera'
+import MiCamara from '../../components/MiCamara'
 
 export default function index() {
   return (
     <View style={styles.container}>
-        <MyCamera />
+        <MiCamara />
     </View>
   )
 }
