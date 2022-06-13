@@ -16,7 +16,10 @@ class MiCamara extends Component {
 
     componentDidMount(){
         Camera.requestCameraPermissionsAsync()
-        .then(response => this.setState({permisos:true}))
+        .then(response => this.setState({
+            permisos:true,
+            urlFoto:''
+        }))
         .catch(error => console.log(error))
 
     }

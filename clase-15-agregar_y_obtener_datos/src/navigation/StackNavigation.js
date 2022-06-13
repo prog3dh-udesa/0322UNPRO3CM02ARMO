@@ -95,6 +95,9 @@ class StackNavigation extends Component{
                                 initialParams={{
                                     newMessage: (message, urlFoto)=> this.newMessage(message, urlFoto)                                    
                                 }}
+                                options={{
+                                    unmountOnBlur: true
+                                }}
                             />
                             <Stack.Screen
                             name='Comments'
